@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Course from "./pages/Course";
 import CoursePlatinado from "./pages/CoursePlatinado";
+import CourseColorimetria from "./pages/CourseColorimetria";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/course" element={<Course />} />
           <Route path="/course/platinado" element={<CoursePlatinado />} />
+          <Route path="/colorimetria" element={<CourseColorimetria />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

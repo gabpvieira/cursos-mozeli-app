@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { BookOpen } from "lucide-react";
+import { Palette } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
 import LeadCaptureModal from "./LeadCaptureModal";
 
-const courseCover = "https://i.postimg.cc/4xy9Gjbt/md1-moz.jpg";
+const courseCover = "https://i.postimg.cc/xTNT61mS/CAPA-COLORIMETRIA.png";
 
-const CourseCard = () => {
+const CourseCardColorimetria = () => {
   const navigate = useNavigate();
   const { isLeadCaptured, isLoading } = useLeadCapture();
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +29,7 @@ const CourseCard = () => {
       >
         <img 
           src={courseCover} 
-          alt="Curso Iniciante para Barbeiros" 
+          alt="Colorimetria para Barbeiros" 
           className="w-full h-auto object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
       </motion.div>
@@ -40,8 +40,8 @@ const CourseCard = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
         >
-          <BookOpen className="w-5 h-5" />
-          <span className="text-sm font-medium uppercase tracking-wider">Técnicas e fundamentos</span>
+          <Palette className="w-5 h-5" />
+          <span className="text-sm font-medium uppercase tracking-wider">Do Básico ao Avançado</span>
         </motion.div>
         <motion.h2 
           className="text-xl sm:text-2xl font-bold text-foreground leading-tight"
@@ -49,7 +49,7 @@ const CourseCard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
         >
-          Curso Iniciante para Barbeiros
+          Colorimetria para Barbeiros
         </motion.h2>
         <motion.p 
           className="text-sm sm:text-base text-muted-foreground leading-relaxed"
@@ -57,8 +57,8 @@ const CourseCard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.0, ease: "easeOut" }}
         >
-          Aprenda do zero os fundamentos essenciais da barbearia profissional. 
-          Um guia completo passo a passo para começar sua carreira com excelência.
+          Domine a arte da coloração capilar com este guia completo. Aprenda fundamentos da colorimetria, 
+          técnicas de descoloração, uso de superclareadores e regulação de pH para resultados profissionais.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const CourseCard = () => {
           <Button 
             onClick={() => {
               if (isLeadCaptured) {
-                navigate('/course');
+                navigate('/colorimetria');
               } else {
                 setShowModal(true);
               }
@@ -85,11 +85,11 @@ const CourseCard = () => {
       <LeadCaptureModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
-        onSuccess={() => navigate('/course')}
-        courseName="Curso Iniciante para Barbeiros"
+        onSuccess={() => navigate('/colorimetria')}
+        courseName="Colorimetria para Barbeiros"
       />
     </motion.div>
   );
 };
 
-export default CourseCard;
+export default CourseCardColorimetria;

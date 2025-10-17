@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import CourseCard from "@/components/CourseCard";
 import CourseCardPlatinado from "@/components/CourseCardPlatinado";
+import CourseCardColorimetria from "@/components/CourseCardColorimetria";
 
 const Index = () => {
   return (
@@ -82,6 +83,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <CourseCard />
             <CourseCardPlatinado />
+            <CourseCardColorimetria />
           </div>
         </div>
       </main>
