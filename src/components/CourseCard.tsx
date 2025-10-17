@@ -22,7 +22,7 @@ const CourseCard = () => {
       whileHover={{ scale: 1.02 }}
     >
       <motion.div 
-        className="overflow-hidden bg-muted"
+        className="overflow-hidden bg-muted relative"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
@@ -32,6 +32,15 @@ const CourseCard = () => {
           alt="Curso Iniciante para Barbeiros" 
           className="w-full h-auto object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
+        {/* Tag GRATUITO */}
+        <motion.div
+          className="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg"
+          initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+        >
+          GRATUITO
+        </motion.div>
       </motion.div>
       <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
         <motion.div 
